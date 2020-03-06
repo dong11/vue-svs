@@ -4,6 +4,9 @@
     <van-pull-refresh v-model="isLoading" @refresh="onRefresh" :head-height="80">
       <div class="home-content">
         <div class="top-bg"></div>
+        <div class="top-box flex">
+          <span class="ic-scan"></span>
+        </div>
       </div>
     </van-pull-refresh>
   </div>
@@ -51,6 +54,14 @@ export default {
       height: 256px;
       background: url("../../../assets/images/bg-home-top.png");
       background-size: 100% 100%;
+    }
+
+    .top-box {
+      .ic-scan {
+        width: 56px;
+        height: 56px;
+        background: url("../../../assets/images/ic-scan.png");
+      }
     }
   }
 }
