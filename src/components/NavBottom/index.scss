@@ -1,0 +1,115 @@
+$navNormalColor: rgba(44,48,60,1);
+$navActiveColor: rgba(254,67,100,1);
+
+.nav-bottom {
+  width: 100%;
+  height: 112px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  .nav-bg {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    background: url('./images/bg-nav.png');
+    width: 100%;
+    height: 192px;
+    background-size: 100% 100%;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    flex: 1;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    padding-top: 68px;
+
+    .icon {
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto;
+      width: 48px;
+      height: 48px;
+    }
+
+    span {
+      font-size: 22px;
+      font-family: PingFangSC-Light, PingFang SC;
+      font-weight: 300;
+      color: $navNormalColor;
+      vertical-align: top;
+    }
+  }
+
+  .home .icon {
+    background: url('./images/ic-home.png');
+    background-size: 100% 100%;
+  }
+
+  .map .icon {
+    width: 92px;
+    height: 112px;
+    top: -40px;
+    background: url('./images/ic-map.png');
+    background-size: 100% 100%;
+  }
+
+  .follow .icon {
+    background: url('./images/ic-follow.png');
+    background-size: 100% 100%;
+  }
+
+  .message .icon {
+    background: url('./images/ic-msg.png');
+    background-size: 100% 100%;
+  }
+
+  .mine .icon {
+    background: url('./images/ic-me.png');
+    background-size: 100% 100%;
+  }
+
+  .router-link-active.home {
+    .icon {
+      background: url('./images/ic-home-active.png');
+      background-size: 100% 100%;
+    }
+    span {
+      color: $navActiveColor;
+    }
+  }
+  .router-link-active.follow {
+    .icon {
+      background: url('./images/ic-follow-active.png');
+      background-size: 100% 100%;
+    }
+    span {
+      color: $navActiveColor;
+    }
+  }
+  .router-link-active.message {
+    .icon {
+      background: url('./images/ic-msg-active.png');
+      background-size: 100% 100%;
+    }
+    span {
+      color: $navActiveColor;
+    }
+  }
+  .router-link-active.mine {
+    .icon {
+      background: url('./images/ic-me-active.png');
+      background-size: 100% 100%;
+    }
+    span {
+      color: $navActiveColor;
+    }
+  }
+}
