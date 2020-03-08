@@ -5,12 +5,17 @@ import App from './App'
 import router from './router'
 import 'amfe-flexible'
 import 'vant/lib/index.css'
-import { PullRefresh, Toast } from 'vant'
+import {
+  PullRefresh, Toast,
+  Swipe, SwipeItem
+} from 'vant'
 
 Vue.config.productionTip = false
 
 Vue.use(PullRefresh)
-Vue.use(Toast)
+  .use(Toast)
+  .use(Swipe)
+  .use(SwipeItem)
 
 /* eslint-disable no-new */
 new Vue({

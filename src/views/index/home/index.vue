@@ -4,19 +4,24 @@
     <van-pull-refresh v-model="isLoading" @refresh="onRefresh" :head-height="80">
       <div class="home-content">
         <div class="top-bg"></div>
-        <div class="top-box flex">
+        <div class="top-box flex align-items-center">
           <span class="ic-scan"></span>
+          <span class="ic-camera"></span>
+          <div class="search-box">想要什么搜一下</div>
         </div>
+        <banner></banner>
       </div>
     </van-pull-refresh>
   </div>
 </template>
 
 <script>
+import Banner from '@/components/Banner'
 import TitleBar from './TitleBar'
 export default {
   components: {
-    'title-bar': TitleBar
+    'title-bar': TitleBar,
+    'banner': Banner
   },
   data () {
     return {
@@ -57,10 +62,37 @@ export default {
     }
 
     .top-box {
+      position: relative;
+      padding: 16px 30px;
+      padding-bottom: 30px;
+
       .ic-scan {
         width: 56px;
         height: 56px;
         background: url("../../../assets/images/ic-scan.png");
+        background-size: 100% 100%;
+      }
+
+      .ic-camera {
+        width: 56px;
+        height: 56px;
+        background: url("../../../assets/images/ic-camera.png");
+        background-size: 100% 100%;
+        margin-left: 16px;
+      }
+
+      .search-box {
+        width: 542px;
+        height: 60px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 36px;
+        margin-left: 20px;
+        text-align: center;
+        line-height: 60px;
+        font-size: 26px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: rgba(171, 175, 186, 1);
       }
     }
   }
